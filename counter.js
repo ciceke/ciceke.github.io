@@ -1,4 +1,5 @@
 var inter=0;
+var rand_time;
 
 var audio=document.getElementById("pop");
 
@@ -9,23 +10,27 @@ $("#btn1").click(function(){
 	var upper=Number($("#upper").val());
 	
 	//generate the random number
-	var rand_time=lower + Math.floor(Math.random() * (upper-lower)+2);
+	rand_time=lower + Math.floor(Math.random() * (upper-lower)+2);
 
 	//change the caption of button to HIDE
-	$("#btn2").innerText=="hide";	
-	
+	$("#btn2").innerText="hide";	
+
+	//disable start button
+	$("#btn1").attr("disabled",true);
+
 	//Start interval
-	var inter=setInterval(function() {
+	inter=setInterval(function() {
 			
 		rand_time-=1;
 		if(rand_time>0){
 			$("#counter").text(rand_time);
-			$("h2").text("Counting Down !")
+			$("h2").text("Counting Down !");
 		}else{
 			clearInterval(inter);
-			$("#counter").text("SÜRE DOLDU");
+			$("#counter").text("TIME IS UP");
 			$("h2").text("")
 			audio.play();
+			$("#btn1").attr("disabled",false);
 		}
 	},1000);
 
@@ -39,37 +44,12 @@ $("#btn2").click(function(){
 	else{this.innerText="hide";} 
 });
 
-
-
-
+//RESET TIMER
 $("#reset-btn").click(function(){
-	
+	clearInterval(inter);
+	$("#counter").text("0");
+	$("h2").text("")
+	//rand_time-=rand_time;
+	//console.log("reset button clicked");
+	$("#btn1").attr("disabled",false);
 });
-
-
-
-
-function restart_timer(){
-	var lower=Number($("#lower").val());
-	var upper=Number($("#upper").val());
-	
-	var rand_time=lower + Math.floor(Math.random() * (upper-lower)+1);
-
-	$("#btn2").innerText=="hide";	
-	
-	var inter=setInterval(function() {
-			
-		rand_time-=1;
-		if(rand_time<1){
-			clearInterval(inter);
-			$("#counter").text("SÜRE DOLDU");
-			$("h2").text("")
-			audio.play();
-		}else{
-			$("#counter").text(rand_time);
-			$("h2").text("Counting Down !")
-		}
-	},1000);
-}
-
-
