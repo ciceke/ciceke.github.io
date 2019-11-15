@@ -3,10 +3,6 @@ background:#125588;
 color:white;
 }
 
-div{
-border:2px solid yellow;
-}
-
 h1{
 color:white;
 text-align:center;
@@ -53,10 +49,31 @@ height:40px;
 
 .container{
 border:2px solid white;
-width:60%;
+width:80%;
 margin:20px auto;
 }
 
 img{
 width:100%;
+}
+
+#btn1{
+background:#448822;
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+
+#reset-btn{
+background:#882222;
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+
+#btn2{
+background:#444444;
+color:white;
+font-weight:bold;
+font-size:20px;
 }
