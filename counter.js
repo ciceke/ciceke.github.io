@@ -27,8 +27,8 @@ $("#btn1").click(function(){
 			$("h2").text("Counting Down !");
 		}else{
 			clearInterval(inter);
-			$("#counter").text("TIME IS UP");
-			$("h2").text("")
+			$("#counter").text("0");
+			$("h2").text("TIME IS UP !!!")
 			audio.play();
 			$("#btn1").attr("disabled",false);
 		}
@@ -39,7 +39,7 @@ $("#btn1").click(function(){
 
 //CHANGE THE CAPTION OF SHOW-HIDE BUTTON
 $("#btn2").click(function(){
-	$("h1").toggleClass("hidden");
+	$("h1").toggleClass("no-show");
 	if (this.innerText=="hide"){this.innerText="show";}
 	else{this.innerText="hide";} 
 });
