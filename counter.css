@@ -1,10 +1,13 @@
-body{
-background:#125588;
-color:white;
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "Lato";
+    background-color: #545454;
+    color: white;
 }
 
 h1{
-color:white;
 text-align:center;
 font-size:3em;
 width:100%;
@@ -12,7 +15,8 @@ display:inline-block;
 }
 
 input{
-width:40px;
+width:50px;
+color:black;
 }
 
 .done{
@@ -20,6 +24,7 @@ color:red;
 }
 
 h2{
+
 text-align:center;
 }
 
@@ -28,33 +33,30 @@ margin-left: auto;
 margin-right: auto;
 display: inline-block;
 }
+
 span{
 color:white;
 }
 
-.hidden{
-color:#125588;
+.no-show{
+color:#545454;
 }
 
 h3{
 width:100%;
-color:yellow;
+color:blue;
 }
 
 button{
 width:100%;
 float:left;
-height:40px;
+height:25%;
 }
 
-.container{
-border:2px solid white;
+.timer-container{
+padding-top: 10%;
 width:80%;
-margin:20px auto;
-}
-
-img{
-width:100%;
+margin:80px auto;
 }
 
 #btn1{
@@ -62,6 +64,7 @@ background:#448822;
 color:white;
 font-weight:bold;
 font-size:20px;
+height:80px;
 }
 
 #reset-btn{
